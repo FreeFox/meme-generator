@@ -13,6 +13,7 @@
 .trollface-img {
     width: 31px;
     height: 26px;
+    margin-right: 7px;
 }
 
 .main-title {
@@ -22,7 +23,6 @@
     font-size: 21px;
     line-height: 24px;
     letter-spacing: -0.1em;
-    margin-left: 7px;
 }
 
 .sub-title {
