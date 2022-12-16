@@ -1,0 +1,33 @@
+.header {
+    height: 65px;
+    background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 37px 0px 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.trollface-img {
+    width: 31px;
+    height: 26px;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 24px;
+    letter-spacing: -0.1em;
+    margin-left: 7px;
+}
+
+.sub-title {
+    font-weight: 500;
+    font-family: Inter;
+    font-size: 12px;
+    line-height: 14px;
+}
