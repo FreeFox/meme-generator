@@ -16,6 +16,7 @@
     border: 1px solid #D5D4D8;
     border-radius: 5px;
     padding-left: 10px;
+    font-family: Karla;
 }
 
 .generate-button {
@@ -27,6 +28,8 @@
     font-size: 16px;
     font-weight: 700;
     line-height: 19px;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.1em;
     grid-column: 1 / -1;
+    border-width: 0px;
+    font-family: Karla;
 }
