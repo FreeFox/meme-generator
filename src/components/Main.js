@@ -2,15 +2,13 @@ import './Main.css';
 
 function Main () {
     return (
-        <div className="main">
+        <main className="main">
             <form action="#" className="generator-form">
-                <div className="inputs">
-                    <input type="text" name="up_text" placeholder="Up line" />
-                    <input type="text" name="down_text" placeholder="Down line" />
-                </div>
+                <input type="text" name="top_text" placeholder="Top line" />
+                <input type="text" name="bottom_text" placeholder="Bottom line" />
                 <button type="submit" className="generate-button">Get a new meme image  🖼</button>
             </form>
-        </div>
+        </main>
     );
 }
 

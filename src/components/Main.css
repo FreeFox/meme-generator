@@ -5,16 +5,12 @@
 
 .generator-form {
     margin: 36px auto 0px;
+    display: grid;
+    gap: 15px;
+    grid-template: 40px 40px / 1fr 1fr;
 }
 
-.inputs {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.inputs > input[type="text"] {
+.generator-form > input[type="text"] {
     height: 35px;
     width: 215px;
     border: 1px solid #D5D4D8;
@@ -23,7 +19,6 @@
 }
 
 .generate-button {
-    margin: 10px 0px;
     background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
     border-radius: 5px;
     color: #ffffff;
@@ -33,4 +28,5 @@
     font-weight: 700;
     line-height: 19px;
     letter-spacing: -0.05em;
+    grid-column: 1 / -1;
 }
