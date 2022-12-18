@@ -3,17 +3,25 @@ import React from 'react';
 import memesData from '../memesData';
 
 function Main () {
-    //const [title, setTitle] = React.useState("Get a new meme image 🖼");
     const title = "Get a new meme image 🖼";
-    const [memeImage, setMemeImage] = React.useState("");
+
+    const [meme, setMeme] = React.useState({
+        topText: "",
+        bottomText: "",
+        memeImage: "http://i.imgflip.com/1bij.jpg"
+    });
+
+    const [allMemeImages, setMemeImages] = React.useState(memesData);
     
     function getMemeImage (e) {
         e.preventDefault();
 
         var meme = memesData.data.memes[Math.floor(Math.random() * memesData.data.memes.length)];
 
-        //setTitle("Generating... 🖼");
-        setMemeImage(meme.url);
+        setMeme((prevMeme) => ({
+            ...prevMeme,
+            memeImage: meme.url
+        }));
 
         return false;
     }
@@ -32,8 +40,8 @@ function Main () {
                         {titleMod}
                 </button>
             </form>
-            {memeImage &&
-                <img src={memeImage} alt='Meme' className='meme-image' />}
+            {meme &&
+                <img src={meme.memeImage} alt='Meme' className='meme-image' />}
         </main>
     );
 }
