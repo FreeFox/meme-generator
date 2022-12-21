@@ -26,13 +26,33 @@ function Main () {
         return false;
     }
 
+    function handleChange (event) {
+        //event.preventDefault()
+        var {name, type, value, checked} = event.target;
+
+        setMeme((prevMeme) => ({
+            ...prevMeme,
+            [name]: type === "checkbox" ? checked : value
+        }));
+    }
+
     const titleMod = title.toUpperCase();
 
     return (
         <main className="main">
             <form action="#" className="generator-form">
-                <input type="text" name="top_text" placeholder="Top line" />
-                <input type="text" name="bottom_text" placeholder="Bottom line" />
+                <input
+                    type="text"
+                    name="topText"
+                    placeholder="Top line"
+                    onChange={handleChange}
+                />
+                <input
+                    type="text"
+                    name="bottomText"
+                    placeholder="Bottom line"
+                    onChange={handleChange}
+                />
                 <button type="button"
                     className="generate-button"
                     onClick={getMemeImage}
@@ -40,8 +60,11 @@ function Main () {
                         {titleMod}
                 </button>
             </form>
-            {meme &&
-                <img src={meme.memeImage} alt='Meme' className='meme-image' />}
+            <div className="meme">
+                <img src={meme.memeImage} alt='Meme' className='meme-image' />
+                <h2 className="meme--text top">{meme.topText}</h2>
+                <h2 className="meme--text bottom">{meme.bottomText}</h2>
+            </div>
         </main>
     );
 }
